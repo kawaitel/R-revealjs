@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>index.utf8</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal .slide-menu-button {
+      left: 105px !important;
+    }
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="color.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="index_files/header-attrs-2.6/header-attrs.js"></script>
+    <link href="index_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="index_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+    <script src="index_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="index_files/pymjs-1.3.2/pym.v1.js"></script>
+    <script src="index_files/widgetframe-binding-0.3.1/widgetframe.js"></script>
+    <script src="index_files/jquery-3.5.0/jquery.min.js"></script>
+    <script src="index_files/proj4js-2.3.15/proj4.js"></script>
+    <link href="index_files/highcharts-8.1.2/css/motion.css" rel="stylesheet" />
+    <script src="index_files/highcharts-8.1.2/highcharts.js"></script>
+    <script src="index_files/highcharts-8.1.2/highcharts-3d.js"></script>
+    <script src="index_files/highcharts-8.1.2/highcharts-more.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/stock.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/map.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/annotations.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/data.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/drilldown.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/item-series.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/offline-exporting.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/overlapping-datalabels.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/exporting.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/export-data.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/funnel.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/heatmap.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/treemap.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/sankey.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/dependency-wheel.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/organization.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/solid-gauge.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/streamgraph.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/sunburst.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/vector.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/wordcloud.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/xrange.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/tilemap.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/venn.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/gantt.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/timeline.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/parallel-coordinates.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/bullet.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/coloraxis.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/dumbbell.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/lollipop.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/series-label.js"></script>
+    <script src="index_files/highcharts-8.1.2/plugins/motion.js"></script>
+    <script src="index_files/highcharts-8.1.2/custom/reset.js"></script>
+    <script src="index_files/highcharts-8.1.2/modules/boost.js"></script>
+    <script src="index_files/highchart-binding-0.8.2/highchart.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="title" class="title-slide slide level1" data-background="#262626">
+<h1 data-background="#262626"></h1>
+<h1 style="color: #fff">
+<p>Revealjs Presentation</p>
+</h1>
+</section>
+
+<section>
+<section id="rainbow-background" class="title-slide slide level1 color-change-5x-background" data-transition="fade-in slide-out" style="font-family: Impact,Charcoal;">
+<h1 class="color-change-5x-background" data-transition="fade-in slide-out" style="font-family: Impact,Charcoal;">Rainbow background!</h1>
+
+</section>
+<section id="fade-in-slide-out" class="slide level2" data-transition="slide-in fade-out">
+<h2 data-transition="slide-in fade-out">Fade in, Slide out</h2>
+</section></section>
+<section id="section" class="title-slide slide level1" data-transition="zoom" data-background="#262626">
+<h1 data-transition="zoom" data-background="#262626"></h1>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+</style>
+<h1 style="color: #fff; font-family:&#39;Bangers&#39;, cursive;">
+<p>samples</p>
+</h1>
+</section>
+
+<section id="embed-a-web-page-as-a-background" class="title-slide slide level1" data-background-iframe="https://www.ventusky.com/?p=36.7;139.0;5&amp;l=rain-1h&amp;w=strong" data-transition="zoom" style="color:#fff;font-size: 20px;font-family: Economica,Charcoal;">
+<h1 data-background-iframe="https://www.ventusky.com/?p=36.7;139.0;5&amp;l=rain-1h&amp;w=strong" data-transition="zoom" style="color:#fff;font-size: 20px;font-family: Economica,Charcoal;">Embed a web page as a background</h1>
+
+</section>
+
+<section>
+<section id="slide-with-a-widget" class="title-slide slide level1" data-background="#b22cff" style="color:#fff;font-style:italic;">
+<h1 data-background="#b22cff" style="color:#fff;font-style:italic;">Slide with a widget</h1>
+<ul>
+<li class="fragment">leaflet</li>
+<li class="fragment"><u>highchartr</u></li>
+<li class="fragment">etc ….</li>
+</ul>
+</section>
+<section id="leaflet" class="slide level2" data-transition="fade">
+<h2 data-transition="fade">leaflet</h2>
+<div id="htmlwidget-55c4cac33c0297aada54" style="width:100%;height:576px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-55c4cac33c0297aada54">{"x":{"url":"index_files/figure-revealjs//widgets/widget_unnamed-chunk-1.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</section>
+<section id="highchartr" class="slide level2" data-transition="none">
+<h2 data-transition="none">highchartR</h2>
+<div id="htmlwidget-a7dcfb49338d0b1d59e1" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a7dcfb49338d0b1d59e1">{"x":{"hc_opts":{"chart":{"reflow":true},"title":{"text":"Scatter chart with size and color"},"yAxis":{"title":{"text":"mpg"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"mpg":21,"cyl":6,"disp":160,"hp":110,"drat":3.9,"wt":2.62,"qsec":16.46,"vs":0,"am":1,"gear":4,"carb":4,"x":2.62,"y":21,"z":3.9,"color":"#267B84","colorv":110},{"mpg":21,"cyl":6,"disp":160,"hp":110,"drat":3.9,"wt":2.875,"qsec":17.02,"vs":0,"am":1,"gear":4,"carb":4,"x":2.875,"y":21,"z":3.9,"color":"#267B84","colorv":110},{"mpg":22.8,"cyl":4,"disp":108,"hp":93,"drat":3.85,"wt":2.32,"qsec":18.61,"vs":1,"am":1,"gear":4,"carb":1,"x":2.32,"y":22.8,"z":3.85,"color":"#363769","colorv":93},{"mpg":21.4,"cyl":6,"disp":258,"hp":110,"drat":3.08,"wt":3.215,"qsec":19.44,"vs":1,"am":0,"gear":3,"carb":1,"x":3.215,"y":21.4,"z":3.08,"color":"#267B84","colorv":110},{"mpg":18.7,"cyl":8,"disp":360,"hp":175,"drat":3.15,"wt":3.44,"qsec":17.02,"vs":0,"am":0,"gear":3,"carb":2,"x":3.44,"y":18.7,"z":3.15,"color":"#7FB55F","colorv":175},{"mpg":18.1,"cyl":6,"disp":225,"hp":105,"drat":2.76,"wt":3.46,"qsec":20.22,"vs":1,"am":0,"gear":3,"carb":1,"x":3.46,"y":18.1,"z":2.76,"color":"#305274","colorv":105},{"mpg":14.3,"cyl":8,"disp":360,"hp":245,"drat":3.21,"wt":3.57,"qsec":15.84,"vs":0,"am":0,"gear":3,"carb":4,"x":3.57,"y":14.3,"z":3.21,"color":"#E8DE2E","colorv":245},{"mpg":24.4,"cyl":4,"disp":146.7,"hp":62,"drat":3.69,"wt":3.19,"qsec":20,"vs":1,"am":0,"gear":4,"carb":2,"x":3.19,"y":24.4,"z":3.69,"color":"#400E59","colorv":62},{"mpg":22.8,"cyl":4,"disp":140.8,"hp":95,"drat":3.92,"wt":3.15,"qsec":22.9,"vs":1,"am":0,"gear":4,"carb":2,"x":3.15,"y":22.8,"z":3.92,"color":"#33456E","colorv":95},{"mpg":19.2,"cyl":6,"disp":167.6,"hp":123,"drat":3.92,"wt":3.44,"qsec":18.3,"vs":1,"am":0,"gear":4,"carb":4,"x":3.44,"y":19.2,"z":3.92,"color":"#2B9487","colorv":123},{"mpg":17.8,"cyl":6,"disp":167.6,"hp":123,"drat":3.92,"wt":3.44,"qsec":18.9,"vs":1,"am":0,"gear":4,"carb":4,"x":3.44,"y":17.8,"z":3.92,"color":"#2B9487","colorv":123},{"mpg":16.4,"cyl":8,"disp":275.8,"hp":180,"drat":3.07,"wt":4.07,"qsec":17.4,"vs":0,"am":0,"gear":3,"carb":3,"x":4.07,"y":16.4,"z":3.07,"color":"#A9C54C","colorv":180},{"mpg":17.3,"cyl":8,"disp":275.8,"hp":180,"drat":3.07,"wt":3.73,"qsec":17.6,"vs":0,"am":0,"gear":3,"carb":3,"x":3.73,"y":17.3,"z":3.07,"color":"#A9C54C","colorv":180},{"mpg":15.2,"cyl":8,"disp":275.8,"hp":180,"drat":3.07,"wt":3.78,"qsec":18,"vs":0,"am":0,"gear":3,"carb":3,"x":3.78,"y":15.2,"z":3.07,"color":"#A9C54C","colorv":180},{"mpg":10.4,"cyl":8,"disp":472,"hp":205,"drat":2.93,"wt":5.25,"qsec":17.98,"vs":0,"am":0,"gear":3,"carb":4,"x":5.25,"y":10.4,"z":2.93,"color":"#A9C54C","colorv":205},{"mpg":10.4,"cyl":8,"disp":460,"hp":215,"drat":3,"wt":5.424,"qsec":17.82,"vs":0,"am":0,"gear":3,"carb":4,"x":5.424,"y":10.4,"z":3,"color":"#BECE42","colorv":215},{"mpg":14.7,"cyl":8,"disp":440,"hp":230,"drat":3.23,"wt":5.345,"qsec":17.42,"vs":0,"am":0,"gear":3,"carb":4,"x":5.345,"y":14.7,"z":3.23,"color":"#D3D638","colorv":230},{"mpg":32.4,"cyl":4,"disp":78.7,"hp":66,"drat":4.08,"wt":2.2,"qsec":19.47,"vs":1,"am":1,"gear":4,"carb":1,"x":2.2,"y":32.4,"z":4.08,"color":"#3A2964","colorv":66},{"mpg":30.4,"cyl":4,"disp":75.7,"hp":52,"drat":4.93,"wt":1.615,"qsec":18.52,"vs":1,"am":1,"gear":4,"carb":2,"x":1.615,"y":30.4,"z":4.93,"color":"#440154","colorv":52},{"mpg":33.9,"cyl":4,"disp":71.1,"hp":65,"drat":4.22,"wt":1.835,"qsec":19.9,"vs":1,"am":1,"gear":4,"carb":1,"x":1.835,"y":33.9,"z":4.22,"color":"#3D1C5E","colorv":65},{"mpg":21.5,"cyl":4,"disp":120.1,"hp":97,"drat":3.7,"wt":2.465,"qsec":20.01,"vs":1,"am":0,"gear":3,"carb":1,"x":2.465,"y":21.5,"z":3.7,"color":"#305274","colorv":97},{"mpg":15.5,"cyl":8,"disp":318,"hp":150,"drat":2.76,"wt":3.52,"qsec":16.87,"vs":0,"am":0,"gear":3,"carb":2,"x":3.52,"y":15.5,"z":2.76,"color":"#55A473","colorv":150},{"mpg":15.2,"cyl":8,"disp":304,"hp":150,"drat":3.15,"wt":3.435,"qsec":17.3,"vs":0,"am":0,"gear":3,"carb":2,"x":3.435,"y":15.2,"z":3.15,"color":"#55A473","colorv":150},{"mpg":13.3,"cyl":8,"disp":350,"hp":245,"drat":3.73,"wt":3.84,"qsec":15.41,"vs":0,"am":0,"gear":3,"carb":4,"x":3.84,"y":13.3,"z":3.73,"color":"#E8DE2E","colorv":245},{"mpg":19.2,"cyl":8,"disp":400,"hp":175,"drat":3.08,"wt":3.845,"qsec":17.05,"vs":0,"am":0,"gear":3,"carb":2,"x":3.845,"y":19.2,"z":3.08,"color":"#7FB55F","colorv":175},{"mpg":27.3,"cyl":4,"disp":79,"hp":66,"drat":4.08,"wt":1.935,"qsec":18.9,"vs":1,"am":1,"gear":4,"carb":1,"x":1.935,"y":27.3,"z":4.08,"color":"#3A2964","colorv":66},{"mpg":26,"cyl":4,"disp":120.3,"hp":91,"drat":4.43,"wt":2.14,"qsec":16.7,"vs":0,"am":1,"gear":5,"carb":2,"x":2.14,"y":26,"z":4.43,"color":"#363769","colorv":91},{"mpg":30.4,"cyl":4,"disp":95.1,"hp":113,"drat":3.77,"wt":1.513,"qsec":16.9,"vs":1,"am":1,"gear":5,"carb":2,"x":1.513,"y":30.4,"z":3.77,"color":"#228989","colorv":113},{"mpg":15.8,"cyl":8,"disp":351,"hp":264,"drat":4.22,"wt":3.17,"qsec":14.5,"vs":0,"am":1,"gear":5,"carb":4,"x":3.17,"y":15.8,"z":4.22,"color":"#FDE725","colorv":264},{"mpg":19.7,"cyl":6,"disp":145,"hp":175,"drat":3.62,"wt":2.77,"qsec":15.5,"vs":0,"am":1,"gear":5,"carb":6,"x":2.77,"y":19.7,"z":3.62,"color":"#7FB55F","colorv":175},{"mpg":15,"cyl":8,"disp":301,"hp":335,"drat":3.54,"wt":3.57,"qsec":14.6,"vs":0,"am":1,"gear":5,"carb":8,"x":3.57,"y":15,"z":3.54,"color":"#FDE725","colorv":335},{"mpg":21.4,"cyl":4,"disp":121,"hp":109,"drat":4.11,"wt":2.78,"qsec":18.6,"vs":1,"am":1,"gear":4,"carb":2,"x":2.78,"y":21.4,"z":4.11,"color":"#2C6079","colorv":109}],"type":"bubble"}],"xAxis":{"type":"linear","title":{"text":"wt"},"categories":null}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+</section></section>
+<section id="d3" class="title-slide slide level1">
+<h1>D3</h1>
+<iframe width="50%" height="400" frameborder="0" src="https://observablehq.com/embed/@d3/realtime-horizon-chart?cells=chart">
+</iframe>
+</section>
+
+<section id="youtube" class="title-slide slide level1" data-transition="zoom">
+<h1 data-transition="zoom">😀youtube</h1>
+<div data-align="center">
+<p><iframe width="560" height="315" src="http://www.youtube.com/embed/zsYjsgm4Psg" frameborder="0" allowfullscreen> </iframe></p>
+</div>
+</section>
+
+<section id="section-1" class="title-slide slide level1" data-background-iframe="http://www.youtube.com/embed/zsYjsgm4Psg?autoplay=1&amp;loop=1&amp;autopause=0&amp;mute=1" data-frameborder="0">
+<h1 data-background-iframe="http://www.youtube.com/embed/zsYjsgm4Psg?autoplay=1&amp;loop=1&amp;autopause=0&amp;mute=1" data-frameborder="0"></h1>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+</style>
+<h1 style="color: #fff; font-family:&#39;Amatic SC&#39;, cursive;">
+YouTube2
+</h1>
+</section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+   
+    
+    
+    
+    
+    
+    
+ 
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        chalkboard: {
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
