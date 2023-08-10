@@ -1,6 +1,6 @@
 # R-revealjs
 
-RMarkdownで生成したスライドをGitHub Pagesに公開
+RMarkdownで生成したreveal.jsスライドをGitHub Pagesに公開
 
   
 https://kawaitel.github.io/R-revealjs/
